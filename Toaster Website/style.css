@@ -1,0 +1,79 @@
+body{
+    margin-left: 5%;
+    margin-top: 3%;
+    margin-right: 5%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: bold;
+    background-color: #2c2c2c;
+    color: white;
+}
+
+#btn_buy {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    background-color: rgba(87, 255, 92, 0.756);
+    color: black;
+    border: 5px solid #176d1a;
+    border-radius:5px;
+    font-size: 20px;;
+}
+
+#btn_buy:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgb(0, 255, 8);
+    animation-name:;
+    animation-duration:;
+}
+
+@keyframes bigger {
+    from {font-size:20px}
+    to {font-size:30px}
+}
+
+#btn_dontbuy {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    background-color: rgba(255, 87, 87, 0.756);
+    color: black;
+    border: 5px solid #6d1717;
+    border-radius:5px;
+    font-size: 20px;;
+}
+
+#btn_dontbuy:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgb(255, 0, 0);
+    animation-name:smal;
+    animation-duration:;
+}
+
+@keyframes smaller {
+    from {font-size:20px}
+    to {font-size:0px}
+}
+
+.prices{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.headprices{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size: 20px;
+    text-decoration: underline;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#table{
+    color: black;
+    border: 5px solid #176d1a;
+    border-radius:5px;
+    font-size: 20px;
+    background-color: rgba(87, 255, 92, 0.756)
+}
