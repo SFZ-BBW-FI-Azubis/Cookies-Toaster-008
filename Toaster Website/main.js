@@ -10,10 +10,32 @@ btn_dontbuy.addEventListener("click", () => {
 })
 
 function onBuy() {
-    alert("du wurdest abgezogen hahhahahahahahahahah")
+    document.cookie = "bought=true";
+}
+
+function onDontBuy() {
+    open("https://youtu.be/dQw4w9WgXcQ");
+    btn_dontbuy.style.display = "none";
 }
 
 
-function onDontBuy() {
-    btn_dontbuy.style.display = "none";
+window.addEventListener("load", () => {
+    let cookies = document.cookie
+    const bought = ('; '+document.cookie).split(`; bought=`).pop().split(';')[0];
+    if (!cookies) {
+        alert("erstes mal amk")
+        document.cookie = "visited=true"
+    }
+    if (cookies) {
+        ("moin")
+    }
+    if(bought){
+        alert("bought")
+    }
+})
+
+
+function deleteCookie(){
+    document.cookie = `cookies-accepted=''; max-age=0`;
+    document.cookie = `cookies.accepted=''; max-age=0`;
 }
