@@ -1,11 +1,12 @@
 import React from "react";
 
-function AboutUs() {
+function AboutUsButton() {
   return (
     <>
-        <button> About Us </button>
+        <button id="aboutusbtn"> About Us </button>
     </>
   );
 }
 
-export default AboutUs;
+
+export default AboutUsButton;

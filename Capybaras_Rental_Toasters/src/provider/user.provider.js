@@ -21,6 +21,8 @@ const userProvider = () => {
     // @todo - subscribe
     // @todo - visit count
     // @todo - toast count
+
+    return { addUser, getUsers }
 }
 
 export default userProvider;

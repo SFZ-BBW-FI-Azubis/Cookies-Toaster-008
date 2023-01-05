@@ -2,7 +2,7 @@ import React from "react";
 
 function Rechtliches() {
     return (
-        <button>Rechtliches</button>
+        <button id="legalbtn">Rechtliches</button>
     )
 }
 

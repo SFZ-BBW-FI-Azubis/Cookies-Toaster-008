@@ -3,13 +3,15 @@ import React from "react";
 function LoginForm() {
   return (
     <>
-      <label for="username">Username:</label>
+      <label id="usernametxt" for="username">Benutzername:</label>
+      <br />
       <input type="text" id="username" name="username" />
       <br />
-      <label for="password">Password:</label>
+      <label id="passwordtxt" for="password">Password:</label>
+      <br />
       <input type="password" id="password" name="password" />
       <br />
-      <input type="submit" value="Submit" id="login-button" />
+      <input type="submit" value="Einloggen" id="login-button" />
     </>
   );
 }
