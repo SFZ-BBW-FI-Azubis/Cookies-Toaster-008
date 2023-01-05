@@ -1,7 +1,15 @@
 export let users = [
     {
-        id: "1",
+        id: 1,
         username: "capybaraadmin",
+        password: "capybaraforpresident",
+        expire_date: "2023-05-01",
+        visit_count: "83",
+        toast_count: "420"
+    },
+    {
+        id: 2,
+        username: "capybara",
         password: "capybaraforpresident",
         expire_date: "2023-05-01",
         visit_count: "83",

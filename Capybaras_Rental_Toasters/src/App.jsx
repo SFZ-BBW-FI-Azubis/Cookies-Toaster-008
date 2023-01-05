@@ -4,11 +4,11 @@ import LoginForm from './components/login-form'
 import PriceList from './components/price-list'
 import AboutUsButton from './components/about-us'
 import Rechtliches from './components/rechtliches'
+import userProvider from './provider/user.provider'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const {isLoggedIn, loginUser, logoutUser} = userProvider()
   const [page, setPage] = useState('')
 
   const Content = ({page}) => {
@@ -23,18 +23,16 @@ function App() {
   }
 
   useEffect(() => {
-    console.log('useEffect')
+    console.log('loged in status changed', isLoggedIn)
   }, [isLoggedIn])
-
-
   
   return (
     <div className="App">
       <Navbar isLoggedIn={isLoggedIn} changePageHandler={setPage}/> 
-      <h1 id="title">Capybara's Rentel Service</h1> 
+      <h1 id="title">Capybara's Toaster Rental</h1> 
       
       <section>
-        <LoginForm />
+        {!isLoggedIn ? <LoginForm loginHandler={loginUser}/> : <></> } 
         <PriceList />
       </section>
       

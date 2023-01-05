@@ -1,13 +1,17 @@
 import React from "react";
 
-function LoginForm() {
+function LoginForm({loginHandler}) {
   return (
     <>
-      <label id="usernametxt" for="username">Benutzername:</label>
+      <label id="usernametxt" for="username">
+        Benutzername:
+      </label>
       <br />
       <input type="text" id="username" name="username" />
       <br />
-      <label id="passwordtxt" for="password">Password:</label>
+      <label id="passwordtxt" for="password">
+        Password:
+      </label>
       <br />
       <input type="password" id="password" name="password" />
       <br />
