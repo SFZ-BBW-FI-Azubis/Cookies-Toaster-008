@@ -1,41 +1,64 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./navbar.module.css";
 
-function Navbar({isLoggedIn, changePageHandler}) {
+{
+  /* logout prop definieren */
+}
 
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+function Navbar({ isLoggedIn, changePageHandler, logoutHandler }) {
+  const hamburger = useRef(null);
+  const navLinks = useRef(null);
 
-/*    hamburger.addEventListener('click', () => {
+  function btnLogout() {
+    logoutHandler();
+  }
+  //    const hamburger = document.querySelector('.hamburger');
+  //    const navLinks = document.querySelector('.nav-links');
+
+  /*    hamburger.onClick(() => {
         navLinks.classList.toggle('open');
     });*/
 
-    return (
-        <>
-        <nav>
-            <div className="hamburger">
-                <div className="line"></div>
-                <div className="line"></div>
-                <div className="line"></div>
-            </div>
-            <ul className="nav-links">
-                <li>
-                    {isLoggedIn ? "Logout": "Login"}
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <a onClick={() => changePageHandler("about-us")} href="#">About Us</a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <a onClick={() => changePageHandler("rechtliches")} href="#">Rechtliches</a>
-                </li>
-            </ul>
-        </nav> 
-        </>
-    )
+  return (
+    <>
+      <nav>
+        <div className="hamburger" ref={hamburger}>
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
+        </div>
+        <ul className="nav-links" ref={navLinks}>
+          <li>
+            {/* logout bei onClick aktivieren  */}
+            {isLoggedIn ? (
+              <a href="#" onClick={btnLogout}>
+                Logout
+              </a>
+            ) : (
+              <a href="#">{isLoggedIn ? "Logout" : "Login"}</a>
+            )}
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a onClick={() => changePageHandler("about-us")} href="about-us.html">
+              About Us
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a
+              onClick={() => changePageHandler("rechtliches")}
+              href="Rechtliches"
+            >
+              Rechtliches
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </>
+  );
 }
 
 export default Navbar;

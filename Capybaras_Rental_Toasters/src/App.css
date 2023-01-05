@@ -1,12 +1,11 @@
 /*Primary Color*/
 :root {
   --primary-color: #000000;
-  --secondary-color: #FCFCFC;
-  --tertiary-color: #F6F930;
+  --secondary-color: #fcfcfc;
+  --tertiary-color: #f6f930;
   --quaternary-color: #f47d23;
   --quinary-color: #2f2f2f;
 }
-
 
 @font-face {
   font-family: "RubikBubbles";
@@ -18,7 +17,7 @@
   font-size: 80px;
   color: var(--tertiary-color);
   text-shadow: 2px 2px 1px var(--quaternary-color);
-  margin-bottom: 150px;;
+  margin-bottom: 150px;
 }
 
 #root {
@@ -31,7 +30,7 @@
 /* username und passwortfeld */
 
 #usernametxt,
-#passwordtxt{
+#passwordtxt {
   font-size: 30px;
   color: var(--tertiary-color);
   text-shadow: 2px 2px 1px var(--quinary-color);
@@ -42,8 +41,8 @@
 #username {
   font-size: 35px;
   margin: 15px;
-  padding-left:10px;
-  padding-right:10px;
+  padding-left: 10px;
+  padding-right: 10px;
   border: 2px solid var(--secondary-color);
   border-radius: 5px;
   transition: 500ms;
@@ -53,15 +52,14 @@
 #password:focus,
 #username:focus {
   border-radius: 50px;
-  border: 2px solid var(--secondary-color)
+  border: 2px solid var(--secondary-color);
 }
 
 #password:hover,
 #username:hover {
   border-radius: 50px;
-  border: 2px solid var(--quaternary-color)
+  border: 2px solid var(--quaternary-color);
 }
-
 
 /* Login Button */
 
@@ -86,7 +84,6 @@
   transform: scale(0.99);
   box-shadow: 0 0 15px var(--quaternary-color);
 }
-
 
 #pricing {
   margin: auto;
@@ -114,6 +111,6 @@
 }
 
 #legalbtn,
-#aboutusbtn{
+#aboutusbtn {
   margin-top: 5px;
 }
