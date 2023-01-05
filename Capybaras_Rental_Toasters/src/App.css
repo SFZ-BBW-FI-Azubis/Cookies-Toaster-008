@@ -7,10 +7,6 @@
   --quinary-color: #2f2f2f;
 }
 
-@font-face {
-  font-family: "RubikBubbles";
-  src: url("fonts/RubikBubbles.ttf");
-}
 
 #title {
   font-family: "RubikBubbles";

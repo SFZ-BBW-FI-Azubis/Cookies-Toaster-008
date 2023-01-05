@@ -7,7 +7,7 @@ import {
 
 const userProvider = () => { // Arrow Function
   const [isLoggedIn, setIsLoggedIn] = useState(false); // use state liefert liste zurück weil eckige klammern = array (liste)
-  const users = []; // wir können const benutzen weil inhalt in klammern verändert wird, geht auch bei geschweiften klammern
+  let users = []; 
   addDummyUsers();
 
   function addDummyUsers() {

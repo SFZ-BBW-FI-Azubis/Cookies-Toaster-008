@@ -28,7 +28,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* logout übergeben */ }
       <Navbar isLoggedIn={isLoggedIn} changePageHandler={setPage} logoutHandler={logoutUser} />
       <h1 id="title">Capybara's Toaster Rental</h1>
 
