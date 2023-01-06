@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { toast } from "react-toastify"
 import {
   deserialize,
   serialize,
@@ -48,16 +49,48 @@ const userProvider = () => { // Arrow Function
       if (user.username === username) {
         if (user.password === password) {
           setIsLoggedIn(true);
+          toast.success('Eingeloggt als ' + user.username, {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            });
+            document.cookie = "userID=" + user.id
           return "Login successful!";
         }
+        toast.error('Falsches Passwort für Benutzer ' + user.username, {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          });
         return "Wrong password!";
       }
     }
+    toast.error('Diesen Benutzer gibt es nicht', {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      });
     return "Wrong username!";
   }
 
   // @todo - user Logout
   function logoutUser() {
+    document.cookie = `userID=''; max-age=0`;
     setIsLoggedIn(false);
   }
 

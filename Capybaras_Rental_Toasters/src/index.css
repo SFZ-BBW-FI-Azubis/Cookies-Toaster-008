@@ -8,6 +8,7 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+  margin: 0%;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -28,8 +29,8 @@ a:hover {
 }
 
 body {
-  background-color: #171717;
-  margin: 0;
+  background-color: #1d1d1d;
+  margin: 0px 0px !important;
   display: flex;
   place-items: center;
   min-width: 320px;
@@ -37,6 +38,8 @@ body {
 }
 
 h1 {
+  margin: auto;
+  padding-top: 15vh ;
   font-size: 3.2em;
   line-height: 1.1;
 }
@@ -48,7 +51,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #000000;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -62,7 +65,7 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: #dac9c9;
     background-color: #ffffff;
   }
   a:hover {
