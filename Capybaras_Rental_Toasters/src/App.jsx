@@ -4,7 +4,7 @@ import Navbar from "./components/navbar";
 import LoginForm from "./components/login-form";
 import PriceList from "./components/price-list";
 import AboutUs from "./components/about-us";
-import Rechtliches from "./components/rechtliches";
+import Legal from "./components/legal";
 import userProvider from "./provider/user.provider";
 import ExpireDate from "./components/expire-date";
 import "./App.css";
@@ -18,8 +18,8 @@ function App() {
     switch (page) {
       case "about-us":
         return <AboutUs />;
-      case "rechtliches":
-        return <Rechtliches />;
+      case "legal":
+        return <Legal />;
       default:
         return <></>;
     }
@@ -30,7 +30,7 @@ function App() {
     isLoggedIn
       ? (document.cookie = "")
       : (document.cookie = `userID=''; max-age=0`);
-  }, [isLoggedIn]);
+  }, [isLoggedIn]); //nicht löschen sonst website kaputt irgendwie
 
   return (
     <div className="App">

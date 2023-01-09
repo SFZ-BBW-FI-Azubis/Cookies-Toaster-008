@@ -1,6 +1,6 @@
 import React from "react";
 
-function Rechtliches() {
+function Legal() {
     return (
         <>
         <div class="Rechtstext">
@@ -45,4 +45,4 @@ function Rechtliches() {
     )
 }
 
-export default Rechtliches;
+export default Legal;
